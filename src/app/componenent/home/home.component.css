@@ -1,0 +1,55 @@
+.home-section{
+  display:flex;
+  width:100%;
+  height:30rem; 
+  justify-content: center;
+  align-items: center;
+  padding-top:3rem;
+}
+.home-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.input-titre-group{
+  margin-bottom: 2rem;
+  background-color:#FFFFFF;
+
+ 
+}
+.input-titre{
+  width:30rem ;
+}
+
+
+/* 
+ li.villeSelected{
+  background-color: rgb(163, 168, 170);
+  color: white;
+}
+ li.villeSelected:hover {
+  background-color: #27747c
+}
+.item-ville{
+  list-style-type: none;
+  padding: 0.5rem;
+  color: black;
+  margin:1rem;
+  border-radius: 0.05rem;
+  cursor: pointer;
+  background-color: #EEE;
+}
+.item-ville:hover{
+  color: white;
+  background-color:grey;
+}
+.list-items-ville{
+  padding:0;
+} */
+.title-home{
+  font-size: 5rem;
+  text-align: center;
+  padding: 1rem;
+  color:#217781;
+}

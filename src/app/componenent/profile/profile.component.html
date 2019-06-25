@@ -1,0 +1,16 @@
+<section class="profile-section">
+    <div class="profile-container">
+            <div class="input-titre-group">
+                <div>
+                    <input class="input-titre" #myInput type="text" name="prenom" [(ngModel)]="prenom" placeholder="Entrer prenom" >
+                    <button (click)="addToList(myInput.value)" type="submit">OK</button>
+                </div>
+                    <p *ngFor="let person of tab;let i=index">
+                        <b (click)="editable=i;prenom=person.prenom" *ngIf="editable!=i" > {{i+1}}-{{person.prenom}} </b>
+                        <input *ngIf="editable==i"  [(ngModel)]="prenom" name="prenom" type ="text"> 
+                        <u (click)="updateName(i)">Modifier</u>
+                   </p>
+            </div>
+        
+    </div>
+  </section>

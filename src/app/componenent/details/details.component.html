@@ -1,0 +1,17 @@
+
+
+<section class="details-section">
+  <div class="details-container">
+      <h2>
+          Meteo du {{date | date}}
+      </h2>
+        <p> Ville : {{meteo?.nameVille}}</p>
+        <p>Température de la Matinée : {{meteo.tempMat}}</p> 
+        <p> Température du Soir : {{meteo.tempSoir}}</p>
+
+        <button class="button-login" (click)="gotoListVilles()">Retour</button>
+    </div>
+   
+      
+    
+</section>

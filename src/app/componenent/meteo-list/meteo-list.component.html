@@ -1,0 +1,17 @@
+
+           <!-- <form #search="ngForm" (ngSubmit)="searchVille(search.value)">
+            <div class="input-titre-group">
+                <input class="input-titre" required type="text" name="nameVille" [(ngModel)]="villeForSearch" placeholder="nom de la ville" >
+                <button class="button-change-titre"   type="submit"> Rechercher</button>
+            </div>
+          </form>   -->
+            <ul  class="list-items-ville">
+              <!-- <li (click)="sendToMyParent(meteo.nameVille)"class="item-ville"  [style.display]="meteo.montrer? 'block' : 'none'" [class.villeSelected]="meteo.nameVille === villeSelected"> -->
+                  <li (click)="sendToMyParent(meteo.nameVille)"class="item-ville"  [class.villeSelected]="meteo.nameVille === villeSelected">
+                {{meteo.nameVille}}
+                {{villeForSearch}}
+           
+             </li>
+           </ul>
+  
+

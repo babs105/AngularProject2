@@ -1,0 +1,27 @@
+
+<nav   class="header">
+  <div class="menu">
+      <a [routerLink]="['/home']" routerLinkActive="active">
+        Accueil
+      </a>
+      <a [routerLink]="['/dashbaord']" routerLinkActive="active">
+        Dashbaord
+      </a>
+      <a [routerLink]="['/profile']" routerLinkActive="active">
+        Profile
+      </a>
+  </div> 
+  <div class="button-link" routerLinkActive="active">
+      <a [routerLink]="['/login']" >
+        <button  *ngIf="!loginService.isLoggedIn" class="button-login ">
+         LOGIN 
+       </button>   
+      </a>
+      <a  >
+        <button (click)="logout()" *ngIf="loginService.isLoggedIn" class="button-login ">
+         LOGOUT
+       </button>   
+      </a>
+  </div>
+      
+</nav>

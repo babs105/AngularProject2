@@ -1,0 +1,26 @@
+li.villeSelected{
+    background-color: rgb(163, 168, 170);
+    color: white;
+  }
+  li.show {
+    display: block;
+  }
+   li.villeSelected:hover {
+    background-color: #27747c
+  }
+  .item-ville{
+    list-style-type: none;
+    padding: 0.5rem;
+    color: black;
+    margin:1rem;
+    border-radius: 0.3rem;
+    cursor: pointer;
+    background-color: #EEE;
+  }
+  .item-ville:hover{
+    color: white;
+    background-color:grey;
+  }
+  .list-items-ville{
+    padding:0;
+  }

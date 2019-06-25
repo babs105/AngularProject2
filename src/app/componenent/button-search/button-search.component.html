@@ -1,0 +1,15 @@
+
+    
+        <div class="input-titre-group">
+            <input class="input-titre" required type="text" name="nameVille" [(ngModel)]="villeForSearch" placeholder="Rechercher ville" >
+        </div>
+        
+      <h1  class="title-ville"> Méteo villes</h1> 
+      <ul  class="list-items-ville">
+        
+            <li (click)="donnerNomVille(met.nameVille)"class="item-ville" *ngFor="let met of (meteos | search:villeForSearch)"   [class.villeSelected]="met.nameVille === villeSelected" >
+                 {{met.nameVille}}
+            </li>
+     </ul>
+
+  

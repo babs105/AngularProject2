@@ -3,39 +3,39 @@ jobs:
   build:
     working_directory: ~/project
     docker:
-      - image: circleci/node:chakracore-8.11-browsers-legacy
+        - image: circleci/node:chakracore-8.11-browsers-legacy
     steps:
-      - checkout
-      - run:
-          name: Show current branch
-          command: echo ${CIRCLE_BRANCH}
-      - restore_cache:
-          keys:
-            - v1-dependencies-{{ checksum "package.json" }}
-            - v1-dependencies-
-      - run:
-          name: Install local dependencies
-          command: npm install
-      - save_cache:
-          key: v1-dependencies-{{ checksum "package.json" }}
-          paths:
-              - node_modules
-      - run:
-          name: Linting
-          command: npm run lint
-      - run:
-          name: Testing
-          command: npm run test
-      - run:
-          name: Building
-          command: npm run build-prod
-      - save_cache:
-          key: v1-dist-{{ .Environment.CIRCLE_BRANCH }}-{{ .Environment.CIRCLE_SHA1 }}
-          paths:
-              - dist
-              - package.json
-              - firebase.json
-              - .firebaserc
+        - checkout
+        - run:
+            name: Show current branch
+            command: echo ${CIRCLE_BRANCH}
+        - restore_cache:
+            keys:
+                - v1-dependencies-{{ checksum "package.json" }}
+                - v1-dependencies-
+        - run:
+            name: Install local dependencies
+            command: npm install
+        - save_cache:
+            key: v1-dependencies-{{ checksum "package.json" }}
+            paths:
+                 - node_modules
+        - run:
+            name: Linting
+            command: npm run lint
+        - run:
+            name: Testing
+            command: npm run test
+        - run:
+            name: Building
+            command: npm run build-prod
+        - save_cache:
+            key: v1-dist-{{ .Environment.CIRCLE_BRANCH }}-{{ .Environment.CIRCLE_SHA1 }}
+            paths:
+                - dist
+                - package.json
+                - firebase.json
+                - .firebaserc
   deploy:
     docker:
       - image: circleci/node:chakracore-8.11-browsers-legacy

@@ -6,9 +6,10 @@
                     <button (click)="addToList(myInput.value)" type="submit">OK</button>
                 </div>
                     <p *ngFor="let person of tab;let i=index">
-                        <b (click)="editable=i;prenom=person.prenom" *ngIf="editable!=i" > {{i+1}}-{{person.prenom}} </b>
+                        <b  *ngIf="editable!=i" > {{i+1}}-{{person.prenom}} </b>
                         <input *ngIf="editable==i"  [(ngModel)]="prenom" name="prenom" type ="text"> 
-                        <u (click)="updateName(i)">Modifier</u>
+                        <u *ngIf="editable!=i" (click)="editable=i;prenom=person.prenom">Editer</u>
+                        <u *ngIf="editable==i"(click)="updateName(i)">Modifier</u>
                    </p>
             </div>
         

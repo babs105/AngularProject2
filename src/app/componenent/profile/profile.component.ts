@@ -15,7 +15,7 @@ export class ProfileComponent implements OnInit {
     {prenom:"Salif Coly"},
     {prenom:"Rama Ndiaye"}
   ]
- prenom;
+ prenom:string;
  editable=-1;
   constructor() { }
 
@@ -30,9 +30,11 @@ export class ProfileComponent implements OnInit {
   //    this.editable=true;
 
   //  }
-   updateName(i){
-     alert(i);
-
+  updateName(i){
+     
+     this.tab[i].prenom=this.prenom;
+     this.editable=-1;
+     this.prenom='';
    }
 
 }

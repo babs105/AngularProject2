@@ -48,12 +48,11 @@ jobs:
 
 workflows:
     version: 2
-    -deploy:
         jobs:
         - build
         - deploy:
-            requires:
-                - build
-            filters:
-                branches:
+              requires:
+                   - build
+              filters:
+                  branches:
                     only: master

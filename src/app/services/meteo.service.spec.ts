@@ -1,5 +1,4 @@
 import { TestBed } from '@angular/core/testing';
-
 import { MeteoService } from './meteo.service';
 
 describe('MeteoService', () => {

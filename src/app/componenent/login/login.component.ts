@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { LoginServiceService } from 'src/app/services/login-service.service';
+import { LoginService } from 'src/app/services/login-service';
 import { FormBuilder } from '@angular/forms';
 import {Router } from '@angular/router';
 
@@ -17,7 +17,7 @@ export class LoginComponent implements OnInit {
   message;
   checkoutForm;
   
-  constructor(private loginService:LoginServiceService,private formBuilder: FormBuilder,private router:Router) {
+  constructor(private loginService:LoginService,private formBuilder: FormBuilder,private router:Router) {
      
     this.checkoutForm = this.formBuilder.group({
       login: '',

@@ -4,6 +4,7 @@ import { ActivatedRoute,Router } from '@angular/router';
 
 import { switchMap } from 'rxjs/operators';
 import { Meteo } from 'src/app/model/meteo';
+import { LoginService } from 'src/app/services/login-service';
 
 @Component({
   selector: 'app-dashbaord',
@@ -16,9 +17,15 @@ export class DashbaordComponent implements OnInit {
   villeSelected;
   
   
-  constructor(private meteoService:MeteoService,private router:Router,private activeRoute:ActivatedRoute) { }
+  constructor(private loginService:LoginService ,private meteoService:MeteoService,private router:Router,private activeRoute:ActivatedRoute){
+    if(loginService.isLoggedIn){
+      
+    }
+
+   }
 
   ngOnInit() {
+   
     
       this.activeRoute.paramMap.pipe(
         switchMap(params => {

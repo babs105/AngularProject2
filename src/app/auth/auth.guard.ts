@@ -14,6 +14,7 @@ export class AuthGuard implements CanActivate {
       return  this.checkLogin(url);
   }
   checkLogin(url: string): boolean {
+    console.log("Etat logging",this.loginService.isLoggedIn);
     if (this.loginService.isLoggedIn) { return true; }
 
     // Store the attempted URL for redirecting
@@ -24,7 +25,7 @@ export class AuthGuard implements CanActivate {
     //cette navigation annule automatiquement la navigation actuelle donc la methode return false
     //mais on peut etre beaucoup plus explicite en ajoutant lr return false
 
-    // return false;
+     return false;
   }
   
 }

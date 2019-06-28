@@ -12,7 +12,7 @@
       </a>
   </div> 
   <div class="button-link" routerLinkActive="active">
-      <a [routerLink]="['/login']" >
+      <a [routerLink]="['/login',{form:'log'}]" >
         <button  *ngIf="!loginService.isLoggedIn" class="button-login ">
          LOGIN 
        </button>   
@@ -20,6 +20,11 @@
       <a  >
         <button (click)="logout()" *ngIf="loginService.isLoggedIn" class="button-login ">
          LOGOUT
+       </button>   
+      </a>
+      <a [routerLink]="['/login',{form:'reg'}]"  >
+        <button  *ngIf="!loginService.isLoggedIn" class="button-login ">
+         REGISTER
        </button>   
       </a>
   </div>

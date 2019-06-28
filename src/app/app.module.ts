@@ -14,6 +14,7 @@ import { DetailsComponent } from './componenent/details/details.component';
 import { PageNotFoundComponent } from './componenent/page-not-found/page-not-found.component';
 import { MeteoListComponent } from './componenent/meteo-list/meteo-list.component';
 import { AngularFireAuthModule } from "@angular/fire/auth";
+import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AngularFireModule } from "@angular/fire";
 import { ButtonSearchComponent } from './componenent/button-search/button-search.component';
 import { SearchPipe } from './Pipes/search.pipe';
@@ -50,6 +51,7 @@ var firebaseConfig = {
   imports: [
     BrowserModule,
     AngularFireModule.initializeApp(firebaseConfig),
+    AngularFirestoreModule,
     AngularFireAuthModule,
     FormsModule,
     ReactiveFormsModule,

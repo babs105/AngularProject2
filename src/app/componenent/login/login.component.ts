@@ -59,11 +59,11 @@ export class LoginComponent implements OnInit {
 
   registerUser(data){
     this.authFirebaseService.register(data.login,data.password).then(res=>{
-        console.log(res);
+        console.log("crrer user",res);
 
          // Send Varification link in email
         this.authFirebaseService.sendEmailVerification().then(res => {
-            console.log(res);
+            console.log("verif email",res);
         
             this.message="Registration Successful! Please Verify Your Email";
           }, err => {

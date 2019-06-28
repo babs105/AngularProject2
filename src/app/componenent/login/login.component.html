@@ -18,9 +18,9 @@
              
       </form> -->
       <p>{{message}}</p>
-         <p [class.normal]="true"  *ngIf="normal" >{{message}}</p>
+         <!-- <p [class.normal]="true"  *ngIf="normal" >{{message}}</p>
          <p [class.vert]="true" *ngIf="succes" >{{message}}</p>
-         <p [class.red]="true" *ngIf="error" >{{message}}</p>
+         <p [class.red]="true" *ngIf="error" >{{message}}</p> -->
       <form [formGroup]="checkoutForm" *ngIf="affichFormLogin"   (ngSubmit) = "loginUser(checkoutForm.value)" >
     
         <div class="form-group">

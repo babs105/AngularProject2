@@ -21,7 +21,7 @@ jobs:
                     - node_modules
             - run:
                 name: Building
-                command: npm run build --deleteOutputPath
+                command: npm run build --deleteOutputPath=true
                   
             - save_cache:
                 key: v1-dist-{{ .Environment.CIRCLE_BRANCH }}-{{ .Environment.CIRCLE_SHA1 }}
